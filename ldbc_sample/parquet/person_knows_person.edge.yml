@@ -7,6 +7,17 @@ dst_chunk_size: 100
 directed: false
 prefix: edge/
 adj_lists:
+  - ordered: false
+    aligned_by: src
+    prefix: unordered_by_source
+    file_type: parquet
+    property_groups:
+      - prefix: creationDate
+        file_type: parquet
+        properties:
+          - name: creationDate
+            data_type: date64
+            is_primary: false
   - ordered: true
     aligned_by: src
     prefix: ordered_by_source
