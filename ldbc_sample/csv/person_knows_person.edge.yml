@@ -5,7 +5,7 @@ chunk_size: 1024
 src_chunk_size: 100
 dst_chunk_size: 100
 directed: false
-prefix: edge/
+prefix: edge/person_knows_person/
 adj_lists:
   - ordered: true
     aligned_by: src

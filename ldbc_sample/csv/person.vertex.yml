@@ -1,6 +1,6 @@
 label: person
 chunk_size: 100
-prefix: vertex/
+prefix: vertex/person/
 property_groups:
   - properties:
       - name: id
