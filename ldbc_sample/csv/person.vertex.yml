@@ -6,7 +6,7 @@ property_groups:
       - name: id
         data_type: int64
         is_primary: true
-    prefix: id
+    prefix: id/
     file_type: csv
   - properties:
       - name: firstName
@@ -18,6 +18,6 @@ property_groups:
       - name: gender
         data_type: string
         is_primary: false
-    prefix: first_name_last_name_gender
+    prefix: first_name_last_name_gender/
     file_type: csv
 version: 1
