@@ -1,12 +1,11 @@
 label: person
 chunk_size: 100
-prefix: vertex/
+prefix: vertex/person/
 property_groups:
   - properties:
       - name: id
         data_type: int64
         is_primary: true
-    prefix: id
     file_type: parquet
   - properties:
       - name: firstName
@@ -18,6 +17,5 @@ property_groups:
       - name: gender
         data_type: string
         is_primary: false
-    prefix: first_name_last_name_gender
     file_type: parquet
 version: 1
