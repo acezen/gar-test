@@ -16,7 +16,7 @@ adj_lists:
         file_type: csv
         properties:
           - name: creationDate
-            data_type: date64
+            data_type: string
             is_primary: false
   - ordered: true
     aligned_by: dst
@@ -27,6 +27,6 @@ adj_lists:
         file_type: csv
         properties:
           - name: creationDate
-            data_type: date64
+            data_type: string
             is_primary: false
 version: 1

@@ -18,6 +18,5 @@ property_groups:
       - name: gender
         data_type: string
         is_primary: false
-    prefix: first_name_last_name_gender/
     file_type: orc
 version: 1
