@@ -43,17 +43,9 @@ jobs:
           prerelease: true
           title: "GraphAr latest: pre-release for latest GraphAr"
 
-      - name: Extract tag name
-        id: tag
-        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') && github.repository == 'acezen/gar-test' }}
-        run: echo "TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
-
       - name: Cut a versioned release
         uses: "marvinpinto/action-automatic-releases@latest"
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') && github.repository == 'acezen/gar-test' }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ steps.tag.outputs.TAG }}
-          draft: true
           prerelease: false
-          title: "${{ steps.tag.outputs.TAG }}"
