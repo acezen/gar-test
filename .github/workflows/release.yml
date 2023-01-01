@@ -17,7 +17,7 @@ name: Cut Release
 on:
   push:
     branches:
-      - main
+      - master
 
 
 # Automatically create a GitHub Release, with release details specified (the relevant commits)
@@ -36,7 +36,7 @@ jobs:
 
       - name: Cut a latest release
         uses: "marvinpinto/action-automatic-releases@latest"
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
