@@ -16,9 +16,8 @@ name: Cut Release
 
 on:
   push:
-    branches:
-      - master
-
+    tags:
+      - "v*"
 
 # Automatically create a GitHub Release, with release details specified (the relevant commits)
 jobs:
